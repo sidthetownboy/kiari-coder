@@ -18,6 +18,7 @@ public class TestOracleJDBC {
            
             con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "sidharth","$ID@123");
             stmt = con.createStatement();
+System.out.println("");
             rs = stmt.executeQuery("SELECT * FROM FSL");
             while(rs.next()) {
                 System.out.print(rs.getString(1) + "\t");
